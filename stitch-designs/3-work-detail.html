@@ -1,0 +1,253 @@
+<html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;600;700;800;900&amp;family=Inter:wght@400;500&amp;family=Plus+Jakarta+Sans:wght@600&amp;family=Space+Grotesk:wght@500&amp;family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+    tailwind.config = {
+      darkMode: "class",
+      theme: {
+        extend: {
+          "colors": {
+            "on-primary": "#ffffff",
+            "surface-container-lowest": "#ffffff",
+            "on-tertiary": "#ffffff",
+            "surface": "#fdf8f8",
+            "surface-container-low": "#f7f3f2",
+            "on-secondary-container": "#fffbff",
+            "surface-tint": "#5f5e5e",
+            "primary-container": "#1c1b1b",
+            "secondary-fixed-dim": "#c1c1ff",
+            "background": "#fdf8f8",
+            "tertiary-fixed": "#e2e3e1",
+            "outline-variant": "#c4c7c7",
+            "on-secondary-fixed-variant": "#2f29c5",
+            "error-container": "#ffdad6",
+            "on-tertiary-container": "#838483",
+            "on-error": "#ffffff",
+            "inverse-surface": "#313030",
+            "on-background": "#1c1b1b",
+            "primary-fixed-dim": "#c8c6c5",
+            "surface-container": "#f1edec",
+            "on-tertiary-fixed": "#1a1c1b",
+            "on-secondary-fixed": "#0a006b",
+            "secondary": "#4745db",
+            "on-error-container": "#93000a",
+            "inverse-primary": "#c8c6c5",
+            "surface-container-highest": "#e5e2e1",
+            "primary-fixed": "#e5e2e1",
+            "tertiary-fixed-dim": "#c6c7c5",
+            "on-surface": "#1c1b1b",
+            "on-surface-variant": "#444748",
+            "on-primary-container": "#858383",
+            "on-primary-fixed": "#1c1b1b",
+            "on-primary-fixed-variant": "#474746",
+            "surface-dim": "#ddd9d8",
+            "surface-bright": "#fdf8f8",
+            "inverse-on-surface": "#f4f0ef",
+            "tertiary": "#000000",
+            "on-secondary": "#ffffff",
+            "outline": "#747878",
+            "error": "#ba1a1a",
+            "secondary-container": "#6161f5",
+            "secondary-fixed": "#e2dfff",
+            "on-tertiary-fixed-variant": "#454746",
+            "surface-container-high": "#ebe7e6",
+            "tertiary-container": "#1a1c1b",
+            "surface-variant": "#e5e2e1",
+            "primary": "#000000"
+          },
+          "borderRadius": {
+            "DEFAULT": "0.25rem",
+            "lg": "0.5rem",
+            "xl": "0.75rem",
+            "full": "9999px"
+          },
+          "spacing": {
+            "container-max": "1440px",
+            "stack-lg": "80px",
+            "stack-sm": "16px",
+            "gutter": "24px",
+            "stack-md": "32px",
+            "margin": "64px",
+            "unit": "8px"
+          },
+          "fontFamily": {
+            "display-lg": ["Epilogue"],
+            "body-md": ["Inter"],
+            "heading-sm": ["Plus Jakarta Sans"],
+            "display-xl": ["Epilogue"],
+            "heading-md": ["Plus Jakarta Sans"],
+            "label-mono": ["Space Grotesk"],
+            "body-lg": ["Inter"]
+          },
+          "fontSize": {
+            "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.03em", "fontWeight": "700"}],
+            "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+            "heading-sm": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+            "display-xl": ["80px", {"lineHeight": "1.1", "letterSpacing": "-0.04em", "fontWeight": "700"}],
+            "heading-md": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}],
+            "label-mono": ["12px", {"lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "500"}],
+            "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}]
+          }
+        },
+      },
+    }
+  </script>
+<style>
+    .glass-card {
+      background: rgba(255, 255, 255, 0.65);
+      backdrop-filter: blur(20px);
+      border: 1px solid rgba(255, 255, 255, 0.85);
+      box-shadow: 0 8px 32px rgba(0, 0, 0, 0.04), 0 2px 8px rgba(0, 0, 0, 0.02);
+    }
+    .editorial-divider {
+      position: relative;
+      width: calc(100% - 48px);
+      height: 1px;
+      background: #e5e2e1;
+    }
+    .material-symbols-outlined {
+      font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24;
+    }
+  </style>
+</head>
+<body class="bg-surface font-body-md text-on-surface">
+<!-- TopNavBar -->
+<nav class="sticky top-0 w-full border-b border-white/20 bg-white/70 backdrop-blur-xl z-50 shadow-[0_8px_32px_rgba(0,0,0,0.07)]">
+<div class="flex justify-between items-center max-w-[1440px] mx-auto px-12 h-20">
+<div class="text-2xl font-bold tracking-tighter text-zinc-900">STUDIO_EXCELLENCE</div>
+<div class="hidden md:flex items-center gap-10">
+<a class="font-['Epilogue'] tracking-tight text-sm uppercase font-semibold text-zinc-600 hover:text-zinc-900 transition-colors" href="#">Services</a>
+<a class="font-['Epilogue'] tracking-tight text-sm uppercase font-semibold text-indigo-600 border-b-2 border-indigo-600 pb-1" href="#">Portfolio</a>
+<a class="font-['Epilogue'] tracking-tight text-sm uppercase font-semibold text-zinc-600 hover:text-zinc-900 transition-colors" href="#">Process</a>
+<a class="font-['Epilogue'] tracking-tight text-sm uppercase font-semibold text-zinc-600 hover:text-zinc-900 transition-colors" href="#">About</a>
+</div>
+<button class="active:scale-95 transition-transform bg-primary text-on-primary px-8 py-3 font-['Epilogue'] tracking-tight text-sm uppercase font-bold rounded-full">
+        Start Project
+      </button>
+</div>
+</nav>
+<main class="max-w-[1440px] mx-auto overflow-hidden">
+<!-- HEADER: Editorial Title -->
+<header class="px-12 pt-24 pb-16">
+<div class="flex items-center gap-4 mb-8">
+<span class="font-label-mono text-label-mono text-secondary uppercase">01 / CASE STUDY</span>
+<div class="h-px w-24 bg-secondary"></div>
+</div>
+<h1 class="font-display-xl text-display-xl max-w-4xl">LUMINA ARCHIVE: A Digital Sensory Experience</h1>
+</header>
+<!-- OVERVIEW: Split Layout -->
+<section class="px-12 grid grid-cols-1 lg:grid-cols-12 gap-12 items-start mb-stack-lg">
+<div class="lg:col-span-7 aspect-[4/5] overflow-hidden rounded-xl">
+<img class="w-full h-full object-cover" data-alt="Abstract architectural photography with sharp light and shadows, minimalistic grey concrete textures and blue sky reflection" src="https://lh3.googleusercontent.com/aida-public/AB6AXuB6IEzddLbSA7zvhEnkGvX548D6bci7TIHHZ_AXo2cO7Kmlza1MfsMHe-hmFETxz_k2UGsh4VrkbGeYqdLTpPLj3Mf5TDuXup7-iS5RQOckGu2ZMBPzPnZp85GLe25gsmADGqw1f_0SdhDEPsr8LtUh2_uEA_B5hMzwtOwpEZHtjIpiqy8UrQmKhnQqvDVuopkNThdI6zG9zBZ_B4NmqmWfOwTHxaIqe_HL17HLdeyg-FyAvlUoxiZp5q-pWUklKkA8Aci4lcHPNi6D"/>
+</div>
+<div class="lg:col-span-5 lg:sticky lg:top-32 space-y-stack-md">
+<div class="space-y-4">
+<h2 class="font-heading-md text-heading-md">The Vision</h2>
+<p class="font-body-lg text-body-lg text-on-surface-variant">
+            Lumina Archive is a high-fashion digital repository designed for avant-garde creators. We engineered a platform that mirrors the tactile precision of physical silk and concrete through fluid interactions and high-density typography.
+          </p>
+</div>
+<!-- TECH STACK -->
+<div class="space-y-6 pt-stack-sm">
+<h3 class="font-label-mono text-label-mono text-on-primary-container uppercase tracking-widest">Technologies &amp; Tools</h3>
+<div class="flex flex-wrap gap-3">
+<span class="glass-card font-label-mono text-label-mono px-4 py-2 rounded-full text-primary">REACT.JS</span>
+<span class="glass-card font-label-mono text-label-mono px-4 py-2 rounded-full text-primary">WEBFLOW</span>
+<span class="glass-card font-label-mono text-label-mono px-4 py-2 rounded-full text-primary">GSAP</span>
+<span class="glass-card font-label-mono text-label-mono px-4 py-2 rounded-full text-primary">THREE.JS</span>
+<span class="glass-card font-label-mono text-label-mono px-4 py-2 rounded-full text-primary">TAILWIND CSS</span>
+</div>
+</div>
+<div class="pt-stack-md">
+<button class="flex items-center gap-4 group">
+<span class="w-12 h-12 rounded-full bg-primary flex items-center justify-center text-on-primary transition-transform group-hover:scale-110">
+<span class="material-symbols-outlined">north_east</span>
+</span>
+<span class="font-heading-sm text-heading-sm">Visit Site</span>
+</button>
+</div>
+</div>
+</section>
+<!-- GRID: Asymmetric Layout -->
+<section class="px-12 mb-stack-lg">
+<div class="editorial-divider mb-stack-md"></div>
+<div class="grid grid-cols-1 md:grid-cols-12 gap-8">
+<!-- Panel 1: Wide Detail -->
+<div class="md:col-span-8 glass-card p-4 rounded-xl">
+<div class="overflow-hidden rounded-lg aspect-video">
+<img class="w-full h-full object-cover" data-alt="Interior design of a luxury studio with minimal furniture, warm lighting, and designer lamps against a neutral wall" src="https://lh3.googleusercontent.com/aida-public/AB6AXuC0TFSYW6ZXD6qJECYWaizqHDzH6XFwxvkwXk5fwAN1uu_Mn5Mmf0XWU0xw9S503rJoIOGvsbtAY_1Yfxpah5fOWnQIy_8NNaTcUDjH3_srPtYgzol4ubFvMScw9M08czGr_LX8kpJGYB6tYFO8QTayl478MXZIwBhJXZzpHnWPALKwB0Xikbhfv_5KsdG3MCE2bj3waJYCMq_yhb7simVv7ixBBnhYln96v2--MlEDw8YwyCy3920xUEHigEkdX8olkstDS-JoEJFu"/>
+</div>
+<div class="mt-4 px-2">
+<p class="font-label-mono text-label-mono text-on-surface-variant">01 — LIGHTING SYSTEM</p>
+</div>
+</div>
+<!-- Panel 2: Vertical Detail -->
+<div class="md:col-span-4 glass-card p-4 rounded-xl">
+<div class="overflow-hidden rounded-lg h-[500px]">
+<img class="w-full h-full object-cover" data-alt="Close-up of premium fabric textures, weaving patterns of light grey wool in macro detail with soft shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAw5fGKKlrcLz9-XB0to0K84LQQHR9kudTSAraX4Lidxk0v9rZMqxcLKef1EGySRdrTTXskxR7ojXhBynkAg7uUgG4rZn6i1VmCQqFKwvu4_TQ7Tiol5HCM6HjOCLCIMUrIjaTHplUECEmp8q8jakQeVwntmCTVOjMzKJ3ua3ECroGZqoWF4pgC6mft6X1cxPYta8n0TUpZcyKtYaZMViX9y6eTXw8umk4vzD0NuAS6nwcAgGaM61js2849786t1XW0FLWG5r5mZQnp"/>
+</div>
+<div class="mt-4 px-2">
+<p class="font-label-mono text-label-mono text-on-surface-variant">02 — TEXTURE ENGINE</p>
+</div>
+</div>
+<!-- Panel 3: Floating Middle -->
+<div class="md:col-span-5 glass-card p-4 rounded-xl md:-mt-24 z-10">
+<div class="overflow-hidden rounded-lg aspect-square">
+<img class="w-full h-full object-cover" data-alt="Abstract architectural spiral staircase in white marble with geometric shadows and minimalist aesthetic" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCknzi01GyKN4Iv5zBx4wtMzbwmcf4CKNrNEXP7cRZA2lhHYLng0RH-MXZKmeyWqVOZf5esDieXvYZ5-RHPRG8RIETp7rCWlBJHckfXMR0ytWiJK44Wydn6mH4xDY7Y-AjkILY-KJYX1IRjGiNPtfKA0v7RNjFFbg-65aqHP7sVg_vuv4ln6NgbxXGJhlWIWJ1lm028-es-IAGmj0GzENzTPCACDmbSkMQzkE6zNcIqn0vINLnNYU_92e6Ym6RPOG6jVv5IdGrMTxpF"/>
+</div>
+<div class="mt-4 px-2">
+<p class="font-label-mono text-label-mono text-on-surface-variant">03 — NAVIGATION DEPTH</p>
+</div>
+</div>
+<!-- Panel 4: Wide Screen -->
+<div class="md:col-span-7 glass-card p-4 rounded-xl">
+<div class="overflow-hidden rounded-lg aspect-[16/10]">
+<img class="w-full h-full object-cover" data-alt="Sophisticated typography layout on a museum wall, clean sans-serif black text on white surface with dramatic perspective" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBNCoASwz1enUfhWFMIVFVzIb_zeVBKxYB0IKfVkZ2LE2LQmL9qfecKHAHnWsqBudLjnPlRf6t9xFFrBkF_dl5RDFnsq2zgdZokQ_ixopUdcy55VpebvPzXWimUARS-PmmCIhU6fBohWr4Aluct_lv_yTkuGqqJW1CEemqAamKOBxDFxOuxTolgUPbJt_Unf9wrzqBQmG2OL8MHwz0v6iAb5FONaKyJ9kFkPhvfyiDjr1XGXg2ti9QdOw6L06Hq9dzWGAgO39ftTkeE"/>
+</div>
+<div class="mt-4 px-2">
+<p class="font-label-mono text-label-mono text-on-surface-variant">04 — TYPOGRAPHIC HIERARCHY</p>
+</div>
+</div>
+</div>
+</section>
+<!-- NEXT PROJECT: High Contrast Transition -->
+<section class="bg-primary text-on-primary py-32 px-12 mt-stack-lg flex flex-col items-center justify-center text-center cursor-pointer group">
+<p class="font-label-mono text-label-mono mb-8 opacity-60 uppercase tracking-[0.3em]">Up Next</p>
+<h2 class="font-display-xl text-display-xl mb-12 transition-all duration-700 group-hover:italic group-hover:tracking-widest">NOIR ESTATES</h2>
+<div class="w-20 h-20 rounded-full border border-white/20 flex items-center justify-center group-hover:bg-white group-hover:text-primary transition-all duration-300">
+<span class="material-symbols-outlined text-4xl">arrow_downward</span>
+</div>
+</section>
+</main>
+<!-- Footer -->
+<footer class="w-full py-20 px-12 border-t border-zinc-900 bg-zinc-950">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-[1440px] mx-auto">
+<div class="space-y-6">
+<div class="text-xl font-black text-white">STUDIO_EXCELLENCE</div>
+<p class="font-['Epilogue'] text-sm tracking-wide text-zinc-500 max-w-xs">
+          © 2024 Studio Excellence. Curators of Digital High-Fashion.
+        </p>
+</div>
+<div class="grid grid-cols-2 gap-8">
+<div class="space-y-4">
+<p class="text-zinc-400 font-bold text-xs uppercase tracking-widest">Connect</p>
+<ul class="space-y-2">
+<li class="font-['Epilogue'] text-sm tracking-wide text-zinc-500 hover:text-zinc-200 cursor-pointer transition-transform hover:translate-x-1">Instagram</li>
+<li class="font-['Epilogue'] text-sm tracking-wide text-zinc-500 hover:text-zinc-200 cursor-pointer transition-transform hover:translate-x-1">LinkedIn</li>
+<li class="font-['Epilogue'] text-sm tracking-wide text-zinc-500 hover:text-zinc-200 cursor-pointer transition-transform hover:translate-x-1">Dribbble</li>
+</ul>
+</div>
+<div class="space-y-4">
+<p class="text-zinc-400 font-bold text-xs uppercase tracking-widest">Inquiries</p>
+<ul class="space-y-2">
+<li class="font-['Epilogue'] text-sm tracking-wide text-zinc-500 hover:text-zinc-200 cursor-pointer transition-transform hover:translate-x-1">Contact</li>
+<li class="font-['Epilogue'] text-sm tracking-wide text-zinc-500 hover:text-zinc-200 cursor-pointer transition-transform hover:translate-x-1">Careers</li>
+</ul>
+</div>
+</div>
+</div>
+</footer>
+</body></html>

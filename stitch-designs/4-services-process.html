@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;600;700;800;900&amp;family=Inter:wght@400;500&amp;family=Plus+Jakarta+Sans:wght@600&amp;family=Space+Grotesk:wght@500&amp;family=Syne:wght@700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script id="tailwind-config">
+        tailwind.config = {
+          darkMode: "class",
+          theme: {
+            extend: {
+              "colors": {
+                      "on-primary": "#ffffff",
+                      "surface-container-lowest": "#ffffff",
+                      "on-tertiary": "#ffffff",
+                      "surface": "#fdf8f8",
+                      "surface-container-low": "#f7f3f2",
+                      "on-secondary-container": "#fffbff",
+                      "surface-tint": "#5f5e5e",
+                      "primary-container": "#1c1b1b",
+                      "secondary-fixed-dim": "#c1c1ff",
+                      "background": "#fdf8f8",
+                      "tertiary-fixed": "#e2e3e1",
+                      "outline-variant": "#c4c7c7",
+                      "on-secondary-fixed-variant": "#2f29c5",
+                      "error-container": "#ffdad6",
+                      "on-tertiary-container": "#838483",
+                      "on-error": "#ffffff",
+                      "inverse-surface": "#313030",
+                      "on-background": "#1c1b1b",
+                      "primary-fixed-dim": "#c8c6c5",
+                      "surface-container": "#f1edec",
+                      "on-tertiary-fixed": "#1a1c1b",
+                      "on-secondary-fixed": "#0a006b",
+                      "secondary": "#4745db",
+                      "on-error-container": "#93000a",
+                      "inverse-primary": "#c8c6c5",
+                      "surface-container-highest": "#e5e2e1",
+                      "primary-fixed": "#e5e2e1",
+                      "tertiary-fixed-dim": "#c6c7c5",
+                      "on-surface": "#1c1b1b",
+                      "on-surface-variant": "#444748",
+                      "on-primary-container": "#858383",
+                      "on-primary-fixed": "#1c1b1b",
+                      "on-primary-fixed-variant": "#474746",
+                      "surface-dim": "#ddd9d8",
+                      "surface-bright": "#fdf8f8",
+                      "inverse-on-surface": "#f4f0ef",
+                      "tertiary": "#000000",
+                      "on-secondary": "#ffffff",
+                      "outline": "#747878",
+                      "error": "#ba1a1a",
+                      "secondary-container": "#6161f5",
+                      "secondary-fixed": "#e2dfff",
+                      "on-tertiary-fixed-variant": "#454746",
+                      "surface-container-high": "#ebe7e6",
+                      "tertiary-container": "#1a1c1b",
+                      "surface-variant": "#e5e2e1",
+                      "primary": "#000000"
+              },
+              "borderRadius": {
+                      "DEFAULT": "0.25rem",
+                      "lg": "0.5rem",
+                      "xl": "0.75rem",
+                      "full": "9999px"
+              },
+              "spacing": {
+                      "container-max": "1440px",
+                      "stack-lg": "80px",
+                      "stack-sm": "16px",
+                      "gutter": "24px",
+                      "stack-md": "32px",
+                      "margin": "64px",
+                      "unit": "8px"
+              },
+              "fontFamily": {
+                      "display-lg": ["Epilogue"],
+                      "body-md": ["Inter"],
+                      "heading-sm": ["Plus Jakarta Sans"],
+                      "display-xl": ["Epilogue"],
+                      "heading-md": ["Plus Jakarta Sans"],
+                      "label-mono": ["Space Grotesk"],
+                      "body-lg": ["Inter"]
+              },
+              "fontSize": {
+                      "display-lg": ["64px", {"lineHeight": "1.1", "letterSpacing": "-0.03em", "fontWeight": "700"}],
+                      "body-md": ["16px", {"lineHeight": "1.6", "fontWeight": "400"}],
+                      "heading-sm": ["24px", {"lineHeight": "1.4", "fontWeight": "600"}],
+                      "display-xl": ["80px", {"lineHeight": "1.1", "letterSpacing": "-0.04em", "fontWeight": "700"}],
+                      "heading-md": ["32px", {"lineHeight": "1.3", "fontWeight": "600"}],
+                      "label-mono": ["12px", {"lineHeight": "1", "letterSpacing": "0.1em", "fontWeight": "500"}],
+                      "body-lg": ["18px", {"lineHeight": "1.6", "fontWeight": "400"}]
+              }
+            },
+          },
+        }
+    </script>
+<style>
+        .glass-card {
+            background: rgba(255, 255, 255, 0.65);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.85);
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.04), 0 2px 8px rgba(0, 0, 0, 0.02);
+        }
+        .editorial-divider {
+            height: 1px;
+            background-color: #c4c7c7;
+            width: calc(100% - 24px);
+        }
+        .hero-title {
+            font-family: 'Syne', sans-serif;
+            font-size: 64px;
+            font-weight: 700;
+        }
+    </style>
+</head>
+<body class="bg-background text-on-background font-body-md">
+<nav class="sticky top-0 w-full border-b border-white/20 bg-white/70 backdrop-blur-xl z-50 shadow-[0_8px_32px_rgba(0,0,0,0.07)]">
+<div class="flex justify-between items-center max-w-[1440px] mx-auto px-12 h-20">
+<div class="text-2xl font-bold tracking-tighter text-zinc-900">STUDIO_EXCELLENCE</div>
+<div class="hidden md:flex gap-8 items-center">
+<a class="font-['Epilogue'] tracking-tight text-sm uppercase font-semibold text-indigo-600 border-b-2 border-indigo-600 pb-1" href="#">Services</a>
+<a class="font-['Epilogue'] tracking-tight text-sm uppercase font-semibold text-zinc-600 hover:text-zinc-900 transition-colors" href="#">Portfolio</a>
+<a class="font-['Epilogue'] tracking-tight text-sm uppercase font-semibold text-zinc-600 hover:text-zinc-900 transition-colors" href="#">Process</a>
+<a class="font-['Epilogue'] tracking-tight text-sm uppercase font-semibold text-zinc-600 hover:text-zinc-900 transition-colors" href="#">About</a>
+<button class="bg-primary text-on-primary px-6 py-2 rounded-full font-['Epilogue'] text-sm uppercase tracking-wide font-bold active:scale-95 transition-transform">Start Project</button>
+</div>
+</div>
+</nav>
+<main class="max-w-[1440px] mx-auto">
+<section class="px-12 pt-32 pb-24">
+<div class="flex flex-col gap-6">
+<span class="font-label-mono text-label-mono text-secondary uppercase">Expertise &amp; Method</span>
+<h1 class="hero-title text-primary leading-[1.1] max-w-2xl">Our Expertise</h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl">We blend artistic direction with technical precision to build digital experiences that redefine industry standards.</p>
+</div>
+</section>
+<section class="px-12 pb-32">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="glass-card p-10 flex flex-col gap-8 rounded-xl relative overflow-hidden group">
+<div class="flex justify-between items-start">
+<span class="material-symbols-outlined text-4xl text-secondary" style="font-variation-settings: 'FILL' 0;">brush</span>
+<span class="font-label-mono text-label-mono opacity-40">01</span>
+</div>
+<div class="flex flex-col gap-4">
+<h3 class="font-heading-md text-heading-md text-primary">High-Fashion Design</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Editorial-driven aesthetics focused on typography, whitespace, and immersive motion. We don't just build websites; we curate digital identities.</p>
+</div>
+<ul class="flex flex-col gap-3 font-body-md text-sm text-on-surface">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-xs">check</span> Visual Identity System</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-xs">check</span> UX/UI Architecture</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-xs">check</span> Interactive Prototyping</li>
+</ul>
+<img class="absolute -bottom-12 -right-12 w-32 h-32 opacity-10 group-hover:opacity-20 transition-opacity rounded-full object-cover" data-alt="Close-up of high-end minimalist design portfolio on a high-resolution display with soft studio lighting and clean shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuARLklgkHmF7Vwjom2Zvg-s8xogxt8SPl9JpqQooAN3cSorrwGhZ8eoN-_EuUbzFLmOEPpLqlA9Lrwh-yZQi6nG6WJW0Sh7wCmLKctjGnYef7oOW-dM4KGCRlO79kb5A7ZkxxZ9Aa2YyoxjIvgcSuHdYTtMbh4iV38vwT_jGym1gZc5_D3MhS9vr6UH5ro8OnHwh-UCnHZWBXeb2W8eg_rf4flGwyMXhk3e11iQ8Df80BN3iUu76xuLE60Y1Vr6hla5HwrC5puQwE7S"/>
+</div>
+<div class="glass-card p-10 flex flex-col gap-8 rounded-xl relative overflow-hidden group">
+<div class="flex justify-between items-start">
+<span class="material-symbols-outlined text-4xl text-secondary" style="font-variation-settings: 'FILL' 0;">code</span>
+<span class="font-label-mono text-label-mono opacity-40">02</span>
+</div>
+<div class="flex flex-col gap-4">
+<h3 class="font-heading-md text-heading-md text-primary">Technical Rigor</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Performant, scalable codebases built with modern stacks. We ensure your digital presence is as fast as it is beautiful.</p>
+</div>
+<ul class="flex flex-col gap-3 font-body-md text-sm text-on-surface">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-xs">check</span> Next.js &amp; React Mastery</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-xs">check</span> API &amp; CMS Integration</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-xs">check</span> Micro-interactions &amp; WebGL</li>
+</ul>
+<img class="absolute -bottom-12 -right-12 w-32 h-32 opacity-10 group-hover:opacity-20 transition-opacity rounded-full object-cover" data-alt="Macro photo of sleek lines of code on a dark screen with vibrant indigo and purple syntax highlighting" src="https://lh3.googleusercontent.com/aida-public/AB6AXuD5ZYr66NdartEiFPqUhRQ6Kf-bNSsvj9NtlibkQdWWSXdOoV05Ewfkgg7IhnNBiAQAmohdgpBbxPNumb38c5DRxAn7LzQHlOQnSj54eXZkBTd7REGF_xk9sGzEQL5B0x5FxuDGoB53GR3APAVleyw6a9fI9gLUaPFFFoKYSdT99ggyombQyiQPAHlQbzbJTrh6l_kSSjkqfj_-XQhFH4GLRAasXSsMeukSraep0riaAzG2tFgcq5zHyDL8r75k2Sb7z4lP0OfnwHt2"/>
+</div>
+<div class="glass-card p-10 flex flex-col gap-8 rounded-xl relative overflow-hidden group">
+<div class="flex justify-between items-start">
+<span class="material-symbols-outlined text-4xl text-secondary" style="font-variation-settings: 'FILL' 0;">lightbulb</span>
+<span class="font-label-mono text-label-mono opacity-40">03</span>
+</div>
+<div class="flex flex-col gap-4">
+<h3 class="font-heading-md text-heading-md text-primary">Digital Strategy</h3>
+<p class="font-body-md text-body-md text-on-surface-variant">Roadmapping that aligns business goals with user desires. We find the intersection of commercial success and artistic integrity.</p>
+</div>
+<ul class="flex flex-col gap-3 font-body-md text-sm text-on-surface">
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-xs">check</span> Competitive Analysis</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-xs">check</span> Content Orchestration</li>
+<li class="flex items-center gap-2"><span class="material-symbols-outlined text-xs">check</span> Conversion Optimization</li>
+</ul>
+<img class="absolute -bottom-12 -right-12 w-32 h-32 opacity-10 group-hover:opacity-20 transition-opacity rounded-full object-cover" data-alt="Minimalist top-down view of a designer's workspace with a blank sketchbook, high-quality pen, and marble paperweights" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA3jA8lmUYzKd0Y3RgKvTANDLayBHC00Ua0fpcc9SpEZ0V1jXlIukjBeoOxtu15TgPVAeW7yHw8CWqkCDX2z-SJAYVGpsZg1JaU13iU-weE-6CU75Fw8TskgAMlGM4nAjOKSj4fke-CztPgAlRCbhx5ci52emS0Hk6eO4VX5yRa3xTymdA6cUCYuYAGDzHcZLWXZ5rjcPm6ZuzIyk6Bd3qoF0BsQYD9yPrrB7tD9LO0V3GGqH_Xes41SMmFcVo_enxcoqugPnSXiGEP"/>
+</div>
+</div>
+</section>
+<section class="px-12 py-32 bg-surface-container-low">
+<div class="flex flex-col gap-16">
+<div class="flex justify-between items-end">
+<div class="flex flex-col gap-4">
+<span class="font-label-mono text-label-mono text-secondary uppercase">The Blueprint</span>
+<h2 class="font-display-lg text-display-lg text-primary">How We Work</h2>
+</div>
+<div class="editorial-divider max-w-sm hidden md:block"></div>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 relative">
+<div class="absolute top-10 left-0 w-full h-[1px] bg-outline-variant hidden md:block z-0"></div>
+<div class="flex flex-col gap-6 relative z-10">
+<div class="w-20 h-20 bg-white rounded-full flex items-center justify-center border border-outline-variant shadow-sm">
+<span class="material-symbols-outlined text-secondary text-3xl">search</span>
+</div>
+<div class="flex flex-col gap-2">
+<h4 class="font-heading-sm text-heading-sm text-primary">Discovery</h4>
+<p class="font-body-md text-sm text-on-surface-variant">Immersive workshops to define your brand soul and project objectives.</p>
+</div>
+</div>
+<div class="flex flex-col gap-6 relative z-10">
+<div class="w-20 h-20 bg-white rounded-full flex items-center justify-center border border-outline-variant shadow-sm">
+<span class="material-symbols-outlined text-secondary text-3xl">draw</span>
+</div>
+<div class="flex flex-col gap-2">
+<h4 class="font-heading-sm text-heading-sm text-primary">Design</h4>
+<p class="font-body-md text-sm text-on-surface-variant">Translating concepts into a high-fidelity visual language and user flows.</p>
+</div>
+</div>
+<div class="flex flex-col gap-6 relative z-10">
+<div class="w-20 h-20 bg-white rounded-full flex items-center justify-center border border-outline-variant shadow-sm">
+<span class="material-symbols-outlined text-secondary text-3xl">terminal</span>
+</div>
+<div class="flex flex-col gap-2">
+<h4 class="font-heading-sm text-heading-sm text-primary">Build</h4>
+<p class="font-body-md text-sm text-on-surface-variant">Engineering the solution with meticulous attention to detail and performance.</p>
+</div>
+</div>
+<div class="flex flex-col gap-6 relative z-10">
+<div class="w-20 h-20 bg-white rounded-full flex items-center justify-center border border-outline-variant shadow-sm">
+<span class="material-symbols-outlined text-secondary text-3xl">rocket_launch</span>
+</div>
+<div class="flex flex-col gap-2">
+<h4 class="font-heading-sm text-heading-sm text-primary">Launch</h4>
+<p class="font-body-md text-sm text-on-surface-variant">Rigorous testing, optimization, and the grand reveal to the world.</p>
+</div>
+</div>
+</div>
+</div>
+</section>
+<section class="px-12 py-32 flex flex-col md:flex-row gap-24">
+<div class="md:w-1/3 flex flex-col gap-6">
+<span class="font-label-mono text-label-mono text-secondary uppercase">Common Queries</span>
+<h2 class="font-heading-md text-heading-md text-primary">Frequently Asked Questions</h2>
+<p class="font-body-md text-on-surface-variant">Transparent answers to help you understand our partnership process.</p>
+</div>
+<div class="md:w-2/3 flex flex-col gap-4">
+<div class="glass-card p-6 rounded-lg cursor-pointer flex flex-col gap-4">
+<div class="flex justify-between items-center">
+<h4 class="font-heading-sm text-lg text-primary">How long does a typical project take?</h4>
+<span class="material-symbols-outlined text-on-surface-variant">expand_more</span>
+</div>
+<div class="font-body-md text-on-surface-variant text-sm">Most boutique projects span 8-12 weeks from discovery to launch, depending on complexity and content readiness.</div>
+</div>
+<div class="glass-card p-6 rounded-lg cursor-pointer flex flex-col gap-4">
+<div class="flex justify-between items-center">
+<h4 class="font-heading-sm text-lg text-primary">Do you offer post-launch support?</h4>
+<span class="material-symbols-outlined text-on-surface-variant">expand_more</span>
+</div>
+</div>
+<div class="glass-card p-6 rounded-lg cursor-pointer flex flex-col gap-4">
+<div class="flex justify-between items-center">
+<h4 class="font-heading-sm text-lg text-primary">What platforms do you specialize in?</h4>
+<span class="material-symbols-outlined text-on-surface-variant">expand_more</span>
+</div>
+</div>
+<div class="glass-card p-6 rounded-lg cursor-pointer flex flex-col gap-4">
+<div class="flex justify-between items-center">
+<h4 class="font-heading-sm text-lg text-primary">Can you work with our existing brand?</h4>
+<span class="material-symbols-outlined text-on-surface-variant">expand_more</span>
+</div>
+</div>
+</div>
+</section>
+<footer class="w-full py-20 px-12 border-t border-zinc-800 bg-zinc-950">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-[1440px] mx-auto">
+<div class="flex flex-col gap-8">
+<div class="text-xl font-black text-white">STUDIO_EXCELLENCE</div>
+<p class="font-['Epilogue'] text-sm tracking-wide text-zinc-500 max-w-sm">© 2024 Studio Excellence. Curators of Digital High-Fashion.</p>
+</div>
+<div class="flex flex-col md:items-end gap-6">
+<div class="flex gap-8">
+<a class="font-['Epilogue'] text-sm tracking-wide text-zinc-500 hover:text-zinc-200 hover:translate-x-1 transition-transform cursor-pointer" href="#">Instagram</a>
+<a class="font-['Epilogue'] text-sm tracking-wide text-zinc-500 hover:text-zinc-200 hover:translate-x-1 transition-transform cursor-pointer" href="#">LinkedIn</a>
+<a class="font-['Epilogue'] text-sm tracking-wide text-zinc-500 hover:text-zinc-200 hover:translate-x-1 transition-transform cursor-pointer" href="#">Dribbble</a>
+<a class="font-['Epilogue'] text-sm tracking-wide text-white font-bold cursor-pointer" href="#">Contact</a>
+</div>
+<div class="editorial-divider opacity-10 w-full"></div>
+<div class="text-zinc-600 font-label-mono text-[10px] uppercase tracking-widest">Built for the future. Designed for today.</div>
+</div>
+</div>
+</footer>
+</main>
+</body></html>

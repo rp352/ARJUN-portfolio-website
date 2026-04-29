@@ -1,0 +1,114 @@
+/* ============================================
+   App-Level Styles
+   ============================================ */
+
+.app {
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Scroll-to-top button */
+.scroll-to-top {
+  position: fixed;
+  bottom: 2rem;
+  right: 2rem;
+  width: 44px;
+  height: 44px;
+  border-radius: 50%;
+  background: theme('colors.secondary');
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.25rem;
+  cursor: pointer;
+  z-index: 100;
+  box-shadow: 0 4px 12px rgba(71, 69, 219, 0.25);
+  transition: all 0.3s ease;
+  opacity: 0;
+  transform: translateY(20px);
+  pointer-events: none;
+}
+
+.scroll-to-top.visible {
+  opacity: 1;
+  transform: translateY(0);
+  pointer-events: all;
+}
+
+.scroll-to-top:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 16px rgba(71, 69, 219, 0.35);
+}
+
+@media (max-width: 768px) {
+  .scroll-to-top {
+    bottom: 1rem;
+    right: 1rem;
+    width: 40px;
+    height: 40px;
+  }
+}
+
+/* Page loading animation */
+.page-loader {
+  position: fixed;
+  inset: 0;
+  background: theme('colors.background');
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 10000;
+  transition: opacity 0.5s, visibility 0.5s;
+}
+
+.page-loader.hidden {
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+
+.page-loader-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: theme('spacing.stack-md');
+}
+
+.page-loader-logo {
+  font-family: theme('fontFamily.accent');
+  font-size: theme('fontSize.3xl');
+  font-weight: 700;
+  color: theme('colors.secondary');
+  animation: pulse-loader 1.5s infinite;
+  letter-spacing: -0.05em;
+}
+
+@keyframes pulse-loader {
+  0%, 100% { transform: scale(1); opacity: 1; }
+  50% { transform: scale(1.05); opacity: 0.8; }
+}
+
+.page-loader-bar {
+  width: 120px;
+  height: 2px;
+  background: theme('colors.surface-container-high');
+  overflow: hidden;
+  position: relative;
+}
+
+.page-loader-bar::after {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 40%;
+  background: theme('colors.secondary');
+  animation: loader-slide 1.2s infinite;
+}
+
+@keyframes loader-slide {
+  0% { left: -40%; }
+  100% { left: 100%; }
+}

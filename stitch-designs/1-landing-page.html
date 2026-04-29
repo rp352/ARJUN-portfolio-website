@@ -1,0 +1,427 @@
+<!DOCTYPE html>
+
+<html class="light" lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<link href="https://fonts.googleapis.com/css2?family=Epilogue:wght@400;600;700;800;900&amp;family=Inter:wght@400;500&amp;family=Plus+Jakarta+Sans:wght@600;700&amp;family=Space+Grotesk:wght@500&amp;family=Syne:wght@700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config">
+        tailwind.config = {
+            darkMode: "class",
+            theme: {
+                extend: {
+                    "colors": {
+                        "on-primary": "#ffffff",
+                        "surface-container-lowest": "#ffffff",
+                        "on-tertiary": "#ffffff",
+                        "surface": "#fdf8f8",
+                        "surface-container-low": "#f7f3f2",
+                        "on-secondary-container": "#fffbff",
+                        "surface-tint": "#5f5e5e",
+                        "primary-container": "#1c1b1b",
+                        "secondary-fixed-dim": "#c1c1ff",
+                        "background": "#fdf8f8",
+                        "tertiary-fixed": "#e2e3e1",
+                        "outline-variant": "#c4c7c7",
+                        "on-secondary-fixed-variant": "#2f29c5",
+                        "error-container": "#ffdad6",
+                        "on-tertiary-container": "#838483",
+                        "on-error": "#ffffff",
+                        "inverse-surface": "#313030",
+                        "on-background": "#1c1b1b",
+                        "primary-fixed-dim": "#c8c6c5",
+                        "surface-container": "#f1edec",
+                        "on-tertiary-fixed": "#1a1c1b",
+                        "on-secondary-fixed": "#0a006b",
+                        "secondary": "#4745db",
+                        "on-error-container": "#93000a",
+                        "inverse-primary": "#c8c6c5",
+                        "surface-container-highest": "#e5e2e1",
+                        "primary-fixed": "#e5e2e1",
+                        "tertiary-fixed-dim": "#c6c7c5",
+                        "on-surface": "#1c1b1b",
+                        "on-surface-variant": "#444748",
+                        "on-primary-container": "#858383",
+                        "on-primary-fixed": "#1c1b1b",
+                        "on-primary-fixed-variant": "#474746",
+                        "surface-dim": "#ddd9d8",
+                        "surface-bright": "#fdf8f8",
+                        "inverse-on-surface": "#f4f0ef",
+                        "tertiary": "#000000",
+                        "on-secondary": "#ffffff",
+                        "outline": "#747878",
+                        "error": "#ba1a1a",
+                        "secondary-container": "#6161f5",
+                        "secondary-fixed": "#e2dfff",
+                        "on-tertiary-fixed-variant": "#454746",
+                        "surface-container-high": "#ebe7e6",
+                        "tertiary-container": "#1a1c1b",
+                        "surface-variant": "#e5e2e1",
+                        "primary": "#000000"
+                    },
+                    "borderRadius": {
+                        "DEFAULT": "0.25rem",
+                        "lg": "0.5rem",
+                        "xl": "0.75rem",
+                        "full": "9999px"
+                    },
+                    "spacing": {
+                        "container-max": "1440px",
+                        "stack-lg": "120px",
+                        "stack-sm": "16px",
+                        "gutter": "24px",
+                        "stack-md": "32px",
+                        "margin": "64px",
+                        "unit": "8px"
+                    },
+                    "fontFamily": {
+                        "display-lg": ["Epilogue"],
+                        "body-md": ["Inter"],
+                        "heading-sm": ["Plus Jakarta Sans"],
+                        "display-xl": ["Epilogue"],
+                        "heading-md": ["Plus Jakarta Sans"],
+                        "label-mono": ["Space Grotesk"],
+                        "body-lg": ["Inter"],
+                        "accent": ["Syne"]
+                    }
+                }
+            }
+        }
+    </script>
+<style>.glass-panel {
+    background: rgba(255, 255, 255, 0.7);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.85);
+    box-shadow: 0 8px 32px rgba(0, 0, 0, 0.07), 0 4px 8px rgba(0, 0, 0, 0.04)
+    }
+.grain-bg {
+    background-color: #F5F5F3;
+    background-image: url(https://lh3.googleusercontent.com/aida-public/AB6AXuCjlNZJtudtKB4hWgy0Si_Nn3Ap67uoRJR5TbyQMNylTkb7608qV6E80-V1ijI5SGHVjR_74Pa39ownokKOs8EsimsYOyBn1inxAgX7oCHBmdLldoUaFNHqL9xuK1IQ25E3vQVnSDvufLdSp3JEe3XGpxKlb3HerrX8Q3fZPJ_qnnBGC-P3A4cZj7tiO3z4S3fNrp9l7N56iIG-rybDV7ytLoGyFD4T-Rm2dtwMnkApvRzmzmDtqVg9S4I09gKj8YG1h-pOrRP3olin)
+    }
+.marquee-container {
+    overflow: hidden;
+    white-space: nowrap
+    }
+.marquee-content {
+    display: inline-block;
+    animation: scroll 30s linear infinite
+    }
+@keyframes scroll {
+    from {
+        transform: translateX(0);
+        } to {
+        transform: translateX(-50%);
+        }
+    }
+.editorial-divider {
+    height: 1px;
+    background: #000;
+    width: calc(100% - 48px)
+    }</style>
+</head>
+<body class="bg-background text-on-background font-body-md selection:bg-secondary selection:text-white overflow-x-hidden">
+<!-- TopNavBar -->
+<nav class="sticky top-0 w-full border-b border-white/20 bg-white/70 backdrop-blur-xl z-50 shadow-[0_8px_32px_rgba(0,0,0,0.07)]">
+<div class="flex justify-between items-center max-w-[1440px] mx-auto px-12 h-20">
+<div class="text-2xl font-bold tracking-tighter text-zinc-900">STUDIO_EXCELLENCE</div>
+<div class="hidden md:flex gap-10">
+<a class="text-indigo-600 border-b-2 border-indigo-600 pb-1 font-['Epilogue'] tracking-tight text-sm uppercase font-semibold" href="#">Services</a>
+<a class="text-zinc-600 hover:text-zinc-900 transition-colors font-['Epilogue'] tracking-tight text-sm uppercase font-semibold" href="#">Portfolio</a>
+<a class="text-zinc-600 hover:text-zinc-900 transition-colors font-['Epilogue'] tracking-tight text-sm uppercase font-semibold" href="#">Process</a>
+<a class="text-zinc-600 hover:text-zinc-900 transition-colors font-['Epilogue'] tracking-tight text-sm uppercase font-semibold" href="#">About</a>
+</div>
+<button class="bg-secondary text-white px-8 py-3 rounded-full font-['Epilogue'] tracking-tight text-sm uppercase font-semibold active:scale-95 transition-transform">
+                Start Project
+            </button>
+</div>
+</nav>
+<!-- Hero Section -->
+<section class="relative min-h-[921px] flex items-center grain-bg overflow-hidden px-12">
+<div class="absolute inset-0 flex items-center justify-center opacity-[0.04] pointer-events-none select-none">
+<span class="text-[20vw] font-black tracking-widest">STITCH</span>
+</div>
+<div class="max-w-[1440px] mx-auto w-full grid grid-cols-1 lg:grid-cols-12 gap-12 items-center relative z-10">
+<div class="lg:col-span-7">
+<h1 class="font-display-xl text-display-xl text-on-background mb-8 leading-[1]">
+                    We Build <br/><span class="text-secondary">Websites</span> That <br/>Actually Work.
+                </h1>
+<p class="font-body-lg text-body-lg text-on-surface-variant max-w-xl mb-12">
+                    A premium digital studio dedicated to crafting high-performance, editorial-grade web experiences for brands that refuse to blend in.
+                </p>
+<div class="flex gap-4">
+<button class="bg-secondary text-on-primary px-10 py-5 rounded-full font-display-lg text-sm uppercase tracking-widest shadow-xl active:scale-95 transition-all">
+                        View Showreel
+                    </button>
+<button class="glass-panel px-10 py-5 rounded-full font-display-lg text-sm uppercase tracking-widest active:scale-95 transition-all">
+                        Our Story
+                    </button>
+</div>
+</div>
+<div class="lg:col-span-5 relative h-[600px] hidden lg:block">
+<div class="glass-panel p-4 rounded-xl absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-full max-w-md rotate-3 shadow-2xl">
+<div class="w-full h-[500px] bg-white rounded-lg overflow-hidden relative border border-zinc-100">
+<img class="w-full h-full object-cover" data-alt="minimalist web design layout on a 3D browser mockup with clean typography and soft shadows" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAog9eSCy2QCxWaRi0EVbqC6XOgurrWi7b1INyjRTDAKRwNmwpZD7yxWG8LbhwSVtCrdSq8ByQfTco00LMttLZzUDRm5lpbkayMi8otmjSWrjaRASEkJs3sl5ATNUMnmrWBZuKLqQ_oeNLqiqkO6yeX_pjbnPXvc66byNT0wSOprEotgl3x-dYs85VvYXoubYREr_LnWjrtNUywOw1waeSR1yyJnppEyNBAj0Z4uvMot6753_KuTYMb8y_9nG_9qv5dKcOxFdBXqfZ_"/>
+<div class="absolute top-4 left-4 flex gap-1.5">
+<div class="w-2.5 h-2.5 rounded-full bg-red-400"></div>
+<div class="w-2.5 h-2.5 rounded-full bg-amber-400"></div>
+<div class="w-2.5 h-2.5 rounded-full bg-green-400"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Marquee -->
+<div class="bg-primary py-8 overflow-hidden">
+<div class="marquee-container">
+<div class="marquee-content flex gap-12 items-center">
+<span class="text-on-primary font-accent text-[32px] uppercase">Web Design ✦ Development ✦ Landing Pages ✦ AI Integrations ✦ Webflow ✦ React ✦</span>
+<span class="text-on-primary font-accent text-[32px] uppercase">Web Design ✦ Development ✦ Landing Pages ✦ AI Integrations ✦ Webflow ✦ React ✦</span>
+<span class="text-on-primary font-accent text-[32px] uppercase">Web Design ✦ Development ✦ Landing Pages ✦ AI Integrations ✦ Webflow ✦ React ✦</span>
+</div>
+</div>
+</div>
+<!-- Services Section -->
+<section class="max-w-[1440px] mx-auto py-stack-lg px-12">
+<div class="flex items-center gap-6 mb-16">
+<span class="font-label-mono text-label-mono text-secondary">01 / SERVICES</span>
+<div class="editorial-divider"></div>
+</div>
+<h2 class="font-accent text-[48px] mb-20 text-center">What We Do</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Card 1 -->
+<div class="glass-panel p-10 rounded-2xl group hover:-translate-y-2 transition-all duration-500">
+<div class="w-16 h-16 bg-secondary/10 rounded-xl flex items-center justify-center mb-8">
+<span class="material-symbols-outlined text-secondary text-3xl" data-icon="brush">brush</span>
+</div>
+<h3 class="font-heading-md text-heading-md mb-4">Identity Design</h3>
+<p class="font-body-md text-on-surface-variant">We create visual systems that capture your brand's essence and command attention in crowded digital markets.</p>
+</div>
+<!-- Card 2 -->
+<div class="glass-panel p-10 rounded-2xl group hover:-translate-y-2 transition-all duration-500">
+<div class="w-16 h-16 bg-secondary/10 rounded-xl flex items-center justify-center mb-8">
+<span class="material-symbols-outlined text-secondary text-3xl" data-icon="code">code</span>
+</div>
+<h3 class="font-heading-md text-heading-md mb-4">Development</h3>
+<p class="font-body-md text-on-surface-variant">Technical rigor meets aesthetic beauty. We build pixel-perfect, lightning-fast sites using React and Webflow.</p>
+</div>
+<!-- Card 3 -->
+<div class="glass-panel p-10 rounded-2xl group hover:-translate-y-2 transition-all duration-500">
+<div class="w-16 h-16 bg-secondary/10 rounded-xl flex items-center justify-center mb-8">
+<span class="material-symbols-outlined text-secondary text-3xl" data-icon="auto_awesome">auto_awesome</span>
+</div>
+<h3 class="font-heading-md text-heading-md mb-4">AI Strategy</h3>
+<p class="font-body-md text-on-surface-variant">Future-proof your digital presence with custom AI integrations that streamline workflows and delight users.</p>
+</div>
+</div>
+</section>
+<!-- Work Section -->
+<section class="max-w-[1440px] mx-auto py-stack-lg px-12">
+<div class="flex items-center gap-6 mb-16">
+<span class="font-label-mono text-label-mono text-secondary">02 / PORTFOLIO</span>
+<div class="editorial-divider"></div>
+</div>
+<h2 class="font-display-lg text-display-lg mb-20 leading-none">Selected Work</h2>
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-8 h-auto lg:h-[800px]">
+<div class="lg:col-span-7 h-full">
+<div class="glass-panel w-full h-full rounded-2xl overflow-hidden relative group">
+<img class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" data-alt="high-fashion minimalist interior design website showcasing clean architectural lines and neutral tones" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAzUCVFjY-V44wufpFWxzZHXMwn8RT49C5dpFPQV0MPhRpHnf10hscBfqQcmzEwuOJVxqhX0Y856HU1fc-hdl6xBamFnyVfJNlSVj_GctycWpqUedsz5HL5I7-HVGXfdypV5Cbzgupyy7wuTsV9x2SJiw8MhlCWo7HrVNepRHB_i4_thYEYbRxP30WR_Zf7-YfPWHcBhjLgzdlD5Msv_jZV9RyFvJEm1VOTQm-8LUuRhVHweRM7I6w3wLJVUM3tNh37V2e5Rc561Kvq"/>
+<div class="absolute bottom-0 left-0 w-full p-10 bg-gradient-to-t from-black/80 to-transparent">
+<span class="font-label-mono text-white/70 mb-2 block">CULTURE / 2024</span>
+<h4 class="text-3xl font-bold text-white">The Minimalist Archive</h4>
+</div>
+</div>
+</div>
+<div class="lg:col-span-5 grid grid-rows-2 gap-8">
+<div class="glass-panel w-full h-full rounded-2xl overflow-hidden relative group">
+<img class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" data-alt="luxury e-commerce website design for high-end digital fashion brand featuring bold typography" src="https://lh3.googleusercontent.com/aida-public/AB6AXuDUYfx2X5Rj9gbjU9wWzVxOE2sBhH65baXoIgUrxGCutyfj3IB8zUEtxdIKzMeEFWej_M0LFc6FbDfLhpEnb8NTu2WptMn9zzdisBrdYjq4-XwFUtv48kC_hZAVtg7iZuQ6fjoWQNtyk4HkT1FMuyixxcJe4f_rpTq-GwZc57W108shB3Y_B9FvzWZmB28M443KIKvRUUAcTM_sn1sMwIMRl-2K1_T-7m6AWGyFqffXn1feuBXmqJE8WLFxwHfod2km7SeaH4DnSfAI"/>
+<div class="absolute bottom-0 left-0 w-full p-8 bg-gradient-to-t from-black/80 to-transparent">
+<span class="font-label-mono text-white/70 mb-1 block">FASHION / 2023</span>
+<h4 class="text-xl font-bold text-white">Avant-Garde Studio</h4>
+</div>
+</div>
+<div class="glass-panel w-full h-full rounded-2xl overflow-hidden relative group">
+<img class="w-full h-full object-cover grayscale hover:grayscale-0 transition-all duration-700" data-alt="ultra-modern tech portfolio with deep blue accents and intricate 3D graphics" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCP40Dtx4Lfq2nDR8olpI310Rk7We1rcv2DoFpHGY3IRjW8uBb9ltyiije9Fzintzg9gMAWQ176zk3HAYlwimyNMyFMZkb6M9Annk14svCu6Zd6Ywj_KwjwIr9yBGw0TVgzNcBjpcJctBj1OiksSgmTQKMcjkh6G_1CRN37lg-mnWwZTM3D_4QFd06BkoOAK-tsdJR4ZSyovRWuLijFjFgER92FN624Jtrk54lN2yQFXBTVMKyBkHP1pNP9ZLiWFcaZIGd_TuMc6gPd"/>
+<div class="absolute bottom-0 left-0 w-full p-8 bg-gradient-to-t from-black/80 to-transparent">
+<span class="font-label-mono text-white/70 mb-1 block">TECH / 2024</span>
+<h4 class="text-xl font-bold text-white">CyberCore Labs</h4>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- About Section -->
+<section class="bg-surface-container-low py-stack-lg px-12">
+<div class="max-w-[1440px] mx-auto grid grid-cols-1 lg:grid-cols-2 gap-20 items-center">
+<div class="order-2 lg:order-1">
+<div class="aspect-[4/5] rounded-2xl overflow-hidden shadow-2xl">
+<img class="w-full h-full object-cover" data-alt="editorial portrait of a diverse creative team working in a bright modern studio space" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCjUkccs78fKfNAJjXwKl7ZbTSYJsox1pfpedAArLIDEEZmjip4dI5IV4dm5PpQgnVfZp3slxHIvBEk4xNACuL1A2tsoiMVhRtZ9SG8uFG4i2NcjM2wN9xmvXBy1smHCMuAK7g7vrlgtVINH7uTmbc_TntAwzcA0Hmn3fL4N86nal4eXHs2PIpPeSUqmFowQ69sY1PVwf0BlBgcmLlWG09cOsYTigib-RkWu1lV3UNZtwvKlOyiBfsK7A72lDFILFUx_NKROqixOud5"/>
+</div>
+</div>
+<div class="order-1 lg:order-2">
+<span class="font-label-mono text-secondary mb-6 block">03 / ABOUT US</span>
+<h2 class="font-display-lg text-display-lg mb-10">Crafting Digital <br/>Fine Art.</h2>
+<p class="font-body-lg text-on-surface-variant mb-12">Studio Excellence was founded on the principle that the web should be as beautiful as a high-fashion editorial. We don't just build sites; we curate digital journeys that elevate brands to their highest potential.</p>
+<div class="grid grid-cols-2 gap-12">
+<div>
+<span class="text-[56px] font-bold block mb-2">40+</span>
+<span class="font-label-mono text-on-surface-variant">PROJECTS COMPLETED</span>
+</div>
+<div>
+<span class="text-[56px] font-bold block mb-2">12</span>
+<span class="font-label-mono text-on-surface-variant">DESIGN AWARDS</span>
+</div>
+<div>
+<span class="text-[56px] font-bold block mb-2">100%</span>
+<span class="font-label-mono text-on-surface-variant">CLIENT SATISFACTION</span>
+</div>
+<div>
+<span class="text-[56px] font-bold block mb-2">6yrs</span>
+<span class="font-label-mono text-on-surface-variant">CURATING EXCELLENCE</span>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Process Section -->
+<section class="max-w-[1440px] mx-auto py-stack-lg px-12">
+<div class="flex items-center gap-6 mb-16">
+<span class="font-label-mono text-label-mono text-secondary">04 / PROCESS</span>
+<div class="editorial-divider"></div>
+</div>
+<h2 class="font-display-lg text-display-lg mb-32 text-center">How We Work</h2>
+<div class="relative">
+<div class="absolute top-1/2 left-0 w-full h-[2px] border-t-2 border-dashed border-zinc-300 -translate-y-1/2 hidden md:block"></div>
+<div class="grid grid-cols-1 md:grid-cols-4 gap-12 relative z-10">
+<div class="flex flex-col items-center text-center">
+<div class="w-12 h-12 bg-secondary rounded-full flex items-center justify-center text-white font-bold mb-8 shadow-[0_0_20px_rgba(71,69,219,0.4)] animate-pulse">1</div>
+<h4 class="font-heading-sm text-heading-sm mb-4">Discovery</h4>
+<p class="font-body-md text-on-surface-variant">Uncovering the DNA of your brand and defining clear objectives.</p>
+</div>
+<div class="flex flex-col items-center text-center">
+<div class="w-12 h-12 bg-secondary rounded-full flex items-center justify-center text-white font-bold mb-8 shadow-[0_0_20px_rgba(71,69,219,0.4)]">2</div>
+<h4 class="font-heading-sm text-heading-sm mb-4">Design</h4>
+<p class="font-body-md text-on-surface-variant">Iterative creative direction to find the perfect visual language.</p>
+</div>
+<div class="flex flex-col items-center text-center">
+<div class="w-12 h-12 bg-secondary rounded-full flex items-center justify-center text-white font-bold mb-8 shadow-[0_0_20px_rgba(71,69,219,0.4)]">3</div>
+<h4 class="font-heading-sm text-heading-sm mb-4">Build</h4>
+<p class="font-body-md text-on-surface-variant">Translating designs into high-performance, functional code.</p>
+</div>
+<div class="flex flex-col items-center text-center">
+<div class="w-12 h-12 bg-secondary rounded-full flex items-center justify-center text-white font-bold mb-8 shadow-[0_0_20px_rgba(71,69,219,0.4)]">4</div>
+<h4 class="font-heading-sm text-heading-sm mb-4">Launch</h4>
+<p class="font-body-md text-on-surface-variant">Rigorous testing and deployment for a seamless debut.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Reviews Section -->
+<section class="bg-surface-container-highest/30 py-stack-lg px-12">
+<div class="max-w-[1440px] mx-auto">
+<h2 class="font-accent text-[48px] mb-20 text-center">What Clients Say</h2>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<!-- Review 1 -->
+<div class="glass-panel p-10 rounded-2xl flex flex-col justify-between">
+<div>
+<div class="flex text-secondary mb-6">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-lg italic mb-10">"Studio Excellence didn't just build a website; they transformed how the world sees our brand. The attention to detail is unmatched."</p>
+</div>
+<div class="flex items-center gap-4">
+<img class="w-12 h-12 rounded-full object-cover" data-alt="professional headshot of a female brand director with a soft-focus office background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuA8r3AM2LhzC17ob0aEofeeZI031F1TKrfMndXSxnrDxLWYPZ6mGu-QDRd8CtorVTywOxTSpD_9qv7kd74ck-yGlDKIkqDQxNKaeDzT5qvLgLkjkVFLCtaZHkELnKHJkkIS-Tt1njJg3a9bc9Gux5EUISRiXZcvlVmL4e8qtPI_9RLpcoGpHpBxmKwXnZPJvxqOLVwQuxQj68gjuqQPomx1xEhKUNpxIUh7vYw2KTYz3ttB2XEbJy7pvMY7NckSo2YB1lA5xXAMWN_I"/>
+<div>
+<span class="block font-bold">Sarah Jenkins</span>
+<span class="text-sm text-on-surface-variant">CEO, Luxe Archive</span>
+</div>
+</div>
+</div>
+<!-- Review 2 -->
+<div class="glass-panel p-10 rounded-2xl flex flex-col justify-between">
+<div>
+<div class="flex text-secondary mb-6">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-lg italic mb-10">"The technical performance of our site is as impressive as the design. Our conversion rate increased by 40% in the first month."</p>
+</div>
+<div class="flex items-center gap-4">
+<img class="w-12 h-12 rounded-full object-cover" data-alt="professional headshot of a male technology founder in a minimalist studio" src="https://lh3.googleusercontent.com/aida-public/AB6AXuAsitsBBW-PrG7FQPOb7ljrBmJlcZUwpIx8z6pCbB2TQm9H6pjpNujmt4NykuO9aoRVxloFCoflziS0EMGgJKDtIAB8JcYZ9G6zw2sfOKtt647U9Pi3JwMtUUsA4uqaUvIDFUSN6v_8zU7PypnJGY27Mo6qggd7PZFuURfn1LA6CGL-VOnxAoW-nnGefTR2BWAoTDM_MhuJ-FWupiBCW4Vsru8iYnMkfDy9Z5YImgMb3-YFNs6ukaEwfKeWlelok31_ngpFFKoTSTiI"/>
+<div>
+<span class="block font-bold">Marcus Thorne</span>
+<span class="text-sm text-on-surface-variant">Founder, CyberCore</span>
+</div>
+</div>
+</div>
+<!-- Review 3 -->
+<div class="glass-panel p-10 rounded-2xl flex flex-col justify-between">
+<div>
+<div class="flex text-secondary mb-6">
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+<span class="material-symbols-outlined" style="font-variation-settings: 'FILL' 1;">star</span>
+</div>
+<p class="font-body-lg italic mb-10">"Truly a premium experience from start to finish. They understand the intersection of luxury and utility perfectly."</p>
+</div>
+<div class="flex items-center gap-4">
+<img class="w-12 h-12 rounded-full object-cover" data-alt="professional headshot of a creative director with a blurred art gallery background" src="https://lh3.googleusercontent.com/aida-public/AB6AXuBmHi8CgloE5dG0YdJoes-NR8NnWeGXx3-90PERMxxFUKI5ewwZMk9t09Un9FAvWinmSdBSXRdC8jRtUYmjMLtVnyAfyQgSzK7AxlrvnM3CLTjZqkk2WCCaFsOO_HucFMkCumBMRW15bfMWtWTC9npKHZczDYaRF2rTWuMYmDawvSnaSUl8q9MtJWgQ3jeCFgRZVMs-LYaLiYqNXI6tiNTIQxSw13rLvwcebP6udoLW3nhFVkzATD3iUJ3LChjm2q41X6weQQJ0jNe4"/>
+<div>
+<span class="block font-bold">Elena Rodriguez</span>
+<span class="text-sm text-on-surface-variant">Creative Director, Voda</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</section>
+<!-- Contact Section -->
+<section class="bg-[#111111] text-white py-[160px] px-12 relative overflow-hidden">
+<div class="absolute top-0 right-0 w-[600px] h-[600px] bg-secondary/10 blur-[120px] rounded-full -translate-y-1/2 translate-x-1/2"></div>
+<div class="max-w-[1440px] mx-auto text-center relative z-10">
+<h2 class="font-display-lg text-[64px] mb-8 leading-tight">Ready to Build <br/>Something Iconic?</h2>
+<p class="font-body-lg text-white/60 max-w-2xl mx-auto mb-16">Join the ranks of premium brands that have leveled up their digital presence with Studio Excellence.</p>
+<button class="bg-secondary text-white px-16 py-8 rounded-full font-display-lg text-lg uppercase tracking-widest shadow-[0_20px_50px_rgba(71,69,219,0.3)] hover:-translate-y-1 transition-all duration-300">
+                Start Project Now
+            </button>
+<div class="mt-32 flex flex-wrap justify-center gap-16 font-label-mono text-white/40">
+<span>NEW YORK / 10:45 AM</span>
+<span>LONDON / 03:45 PM</span>
+<span>TOKYO / 11:45 PM</span>
+</div>
+</div>
+</section>
+<!-- Footer -->
+<footer class="bg-zinc-950 dark:bg-black w-full py-20 px-12 border-t border-zinc-900">
+<div class="grid grid-cols-1 md:grid-cols-2 gap-12 max-w-[1440px] mx-auto">
+<div>
+<div class="text-xl font-black text-white mb-8">STUDIO_EXCELLENCE</div>
+<p class="text-zinc-500 font-['Epilogue'] text-sm tracking-wide max-w-sm">
+                    © 2024 Studio Excellence. Curators of Digital High-Fashion. All rights reserved.
+                </p>
+</div>
+<div class="flex flex-col md:items-end gap-12">
+<div class="flex gap-8">
+<a class="text-zinc-500 hover:text-zinc-200 hover:translate-x-1 transition-transform cursor-pointer font-['Epilogue'] text-sm tracking-wide" href="#">Instagram</a>
+<a class="text-zinc-500 hover:text-zinc-200 hover:translate-x-1 transition-transform cursor-pointer font-['Epilogue'] text-sm tracking-wide" href="#">LinkedIn</a>
+<a class="text-zinc-500 hover:text-zinc-200 hover:translate-x-1 transition-transform cursor-pointer font-['Epilogue'] text-sm tracking-wide" href="#">Dribbble</a>
+<a class="text-white font-bold cursor-pointer font-['Epilogue'] text-sm tracking-wide" href="#">Contact</a>
+</div>
+<div class="text-zinc-700 text-sm font-label-mono">
+                    DESIGNED IN NEW YORK — DEVELOPED FOR THE WORLD
+                </div>
+</div>
+</div>
+</footer>
+</body></html>
