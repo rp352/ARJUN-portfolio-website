@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import { FiSend } from 'react-icons/fi'
 import { useToast } from './Toast'
+import { supabase } from '../supabaseClient'
 
 const Contact = () => {
   const toast = useToast()
@@ -40,7 +41,7 @@ const Contact = () => {
     return newErrors
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
     const newErrors = validate()
 
@@ -55,7 +56,20 @@ const Contact = () => {
     setSubmitting(true)
     setErrors({})
 
-    setTimeout(() => {
+    try {
+      const { error } = await supabase
+        .from('contacts')
+        .insert([
+          {
+            name: formData.name,
+            email: formData.email,
+            budget: formData.budget,
+            message: formData.message,
+          }
+        ])
+
+      if (error) throw error
+
       setSubmitting(false)
       setSubmitted(true)
       toast.success(
@@ -66,7 +80,11 @@ const Contact = () => {
         setFormData({ name: '', email: '', budget: '', message: '' })
         setSubmitted(false)
       }, 3000)
-    }, 2000)
+    } catch (error) {
+      console.error('Error submitting form:', error)
+      toast.error('Submission Failed', 'Something went wrong. Please try again later.')
+      setSubmitting(false)
+    }
   }
 
   return (
